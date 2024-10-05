@@ -16,6 +16,13 @@ public class Main {
 
         LocalTime tid = LocalTime.now().truncatedTo(ChronoUnit.SECONDS);
 
+        usernames[0] = ("admin");
+        usernames[1] = ("user1");
+        usernames[2] = ("user2");
+        passwords[0] = ("password123");
+        passwords[1] = ("letmein");
+        passwords[2] = ("qwerty");
+
 
         // Printer velkomstbesked og brugerens valgmuligheder
         System.out.println("Velkommen. Klokken er " + tid + ". Vælg en mulighed.");
