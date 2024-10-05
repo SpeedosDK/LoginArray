@@ -80,16 +80,24 @@ public class Main {
 
     public static void loginAccount()
     {
+
+            String username = "Indtast brugernavn";
+            String password = "Indtast password";
+            validateLogin(username, password);
+
+
+    }
+
+    public static void validateLogin(String username, String password)
+    {
         LocalTime tid = LocalTime.now().truncatedTo(ChronoUnit.SECONDS); // gør så tiden bliver vist i sekunder
         LocalDate dato = LocalDate.now();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy"); // retter format fra mm-dd-yyyy til dd-mm-yyyy
 
-
-
         for (int tries = 0; tries < MAX_TRIES; tries++)
         {
-            String username = getUserInput("Indtast brugernavn: ");
-            String password = getUserInput("Indtast password: ");
+            username = getUserInput("Indtast brugernavn: ");
+            password = getUserInput("Indtast password: ");
 
             boolean userFound = false;
 
@@ -114,8 +122,10 @@ public class Main {
             }
 
         }
-        System.out.println("Du har brugt alle forsøg. Programmet lukker");
+
     }
+
+
     public static String getUserInput(String prompt)
     {
         System.out.println(prompt);
